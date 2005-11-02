@@ -74,15 +74,15 @@
  endif
  
 +ifeq ($(OBJDIR), alpha)
-+BOOTSTRAPFLAGS := -DBOOTSTRAP="\"objcopy -B i386 -I binary -O elf64-alpha\""
++BOOTSTRAPFLAGS := -DBOOTSTRAP="\"objcopy -B alpha -I binary -O elf64-alpha\""
 +endif
 +
 +ifeq ($(OBJDIR), ppc)
-+BOOTSTRAPFLAGS := -DBOOTSTRAP="\"objcopy -B i386 -I binary -O elf32-ppc\""
++BOOTSTRAPFLAGS := -DBOOTSTRAP="\"objcopy -B powerpc -I binary -O elf32-powerpc\""
 +endif
 +
 +ifeq ($(OBJDIR), sparc)
-+BOOTSTRAPFLAGS := -DBOOTSTRAP="\"objcopy -B i386 -I binary -O elf32-sparc\""
++BOOTSTRAPFLAGS := -DBOOTSTRAP="\"objcopy -B sparc -I binary -O elf32-sparc\""
 +endif
  
  $(shell sh -c 'if ! test -d $(OBJDIR)\; then mkdir $(OBJDIR)\; fi' )
