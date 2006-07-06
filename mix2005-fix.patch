@@ -1,0 +1,30 @@
+--- mix2005-1.2/mix2005/Makefile.orig	2006-07-06 21:18:57.683487500 +0200
++++ mix2005-1.2/mix2005/Makefile	2006-07-06 21:18:48.806932750 +0200
+@@ -1,4 +1,4 @@
+-HAVE_LIBXXF86VM := $(shell if [ -f /usr/X11R6/include/X11/extensions/xf86vmode.h ]; then echo yes; fi )
++HAVE_LIBXXF86VM := $(shell if [ -f /usr/include/X11/extensions/xf86vmode.h ]; then echo yes; fi )
+ 
+ include ../global_config
+ 
+--- mix2005-1.2/guicast/Makefile.orig	2006-07-06 20:59:48.919694000 +0200
++++ mix2005-1.2/guicast/Makefile	2006-07-06 21:17:47.091075750 +0200
+@@ -36,7 +36,7 @@
+ BOOTSTRAPFLAGS := -DBOOTSTRAP="\"objcopy -B sparc -I binary -O elf32-sparc\""
+ endif
+ 
+-$(shell sh -c 'if ! test -d $(OBJDIR)\; then mkdir $(OBJDIR)\; fi' )
++$(shell sh -c 'if ! test -d $(OBJDIR); then mkdir $(OBJDIR); fi' )
+ 
+ OBJS = \
+ 	$(OBJDIR)/bcbar.o \
+--- mix2005-1.2/global_config.orig	2006-07-06 20:59:48.915694000 +0200
++++ mix2005-1.2/global_config	2006-07-06 21:17:21.161455250 +0200
+@@ -88,7 +88,7 @@
+ CFLAGS += $(ALSA_CFLAGS)
+ endif
+ 
+-$(shell sh -c 'if ! test -d $(OBJDIR)\; then mkdir $(OBJDIR)\; fi' )
++$(shell sh -c 'if ! test -d $(OBJDIR); then mkdir $(OBJDIR); fi' )
+ 
+ ########################## LINKER
+ 
