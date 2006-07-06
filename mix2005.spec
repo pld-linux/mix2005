@@ -12,11 +12,15 @@ Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/heroines/%{name}-%{version}-src.tar.bz2
 # Source0-md5:	71ff79eca9e065881100334b84ae3094
 Patch0:		%{name}-system-libs.patch
+Patch1:		%{name}-fix.patch
 URL:		http://heroinewarrior.com/mix2000.php3
-BuildRequires:	XFree86-devel
 BuildRequires:	alsa-lib-devel >= 1.0.8
 BuildRequires:	libstdc++-devel
 BuildRequires:	quicktime4linux-devel >= 2.2
+BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXv-devel
+BuildRequires:	xorg-lib-libXxf86vm-devel
 Requires:	alsa-lib >= 1.0.8
 Requires:	quicktime4linux >= 2.2
 Obsoletes:	mix2000
@@ -31,6 +35,7 @@ Mix2005 - mikser z graficznym interfejsem.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 rm -rf alsa-lib-* libmpeg3 quicktime
 
@@ -39,7 +44,7 @@ CFLAGS="%{rpmcflags} -fno-rtti"; export CFLAGS
 %{__make} -C guicast
 
 %{__make} -C mix2005 \
-	LXLIBDIR="-L/usr/X11R6/%{_lib}"
+	LXLIBDIR=
 
 %install
 rm -rf $RPM_BUILD_ROOT
