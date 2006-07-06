@@ -1,16 +1,15 @@
---- mix2005-1.1.0/mix2005/Makefile.orig	2005-04-27 08:52:15.000000000 +0200
-+++ mix2005-1.1.0/mix2005/Makefile	2005-11-01 20:02:32.512632984 +0100
-@@ -4,8 +4,7 @@
+--- mix2005-1.2/mix2005/Makefile.orig	2006-05-21 07:06:03.000000000 +0200
++++ mix2005-1.2/mix2005/Makefile	2006-07-06 10:11:38.194440000 +0200
+@@ -3,7 +3,7 @@
  include ../global_config
  
  CFLAGS += -I../guicast \
--	-I../quicktime \
--	-I$(ALSA_DIR)/include
+-	-I../quicktime
 +	-I/usr/include/quicktime
  
  PREFIX=/usr
  
-@@ -28,11 +27,11 @@
+@@ -26,11 +26,11 @@
  THEME_DATA := $(OBJDIR)/theme_data.o
  
  ifeq ($(OBJDIR), x86_64)
@@ -25,16 +24,7 @@
  
  
  LIBS += -lGL \
-@@ -44,7 +43,7 @@
- 	-lz  \
- 	-ldl  \
- 	$(XXF86VM) \
--	$(ALSA_DIR)/$(OBJDIR)/libasound.a \
-+	-lasound \
- 	$(THEME_DATA)
- 
- ifeq ($(HAVE_XFT), y)
-@@ -59,7 +58,7 @@
+@@ -57,7 +57,7 @@
  	$(CC) -o $(OUTPUT) \
  		$(OBJS) \
  		../guicast/$(OBJDIR)/libguicast.a \
