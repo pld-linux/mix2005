@@ -3,22 +3,22 @@
 Summary:	Mix2005 - a mixer with GUI
 Summary(pl):	Mix2005 - mikser z graficznym interfejsem
 Name:		mix2005
-Version:	1.1.0
+Version:	1.2
 Release:	1
 # no license information in mix2005 itself, but it includes GPL libraries
 # and is part of GPLed Heroine Virtual software
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/heroines/%{name}-%{version}-src.tar.bz2
-# Source0-md5:	0ccae70119b5eec8502831bf186bf911
+# Source0-md5:	71ff79eca9e065881100334b84ae3094
 Patch0:		%{name}-system-libs.patch
 URL:		http://heroinewarrior.com/mix2000.php3
 BuildRequires:	XFree86-devel
 BuildRequires:	alsa-lib-devel >= 1.0.8
 BuildRequires:	libstdc++-devel
-BuildRequires:	quicktime4linux-devel >= 2.1
+BuildRequires:	quicktime4linux-devel >= 2.2
 Requires:	alsa-lib >= 1.0.8
-Requires:	quicktime4linux >= 2.1
+Requires:	quicktime4linux >= 2.2
 Obsoletes:	mix2000
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
