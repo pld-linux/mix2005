@@ -1,7 +1,7 @@
 # TODO: build guicast as separate, shared library to use in
 #       xmovie, mix2005 and cinelerra
 Summary:	Mix2005 - a mixer with GUI
-Summary(pl.UTF-8):   Mix2005 - mikser z graficznym interfejsem
+Summary(pl.UTF-8):	Mix2005 - mikser z graficznym interfejsem
 Name:		mix2005
 Version:	1.2
 Release:	1
