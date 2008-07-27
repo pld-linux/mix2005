@@ -4,7 +4,7 @@ Summary:	Mix2005 - a mixer with GUI
 Summary(pl.UTF-8):	Mix2005 - mikser z graficznym interfejsem
 Name:		mix2005
 Version:	1.2
-Release:	1
+Release:	2
 # no license information in mix2005 itself, but it includes GPL libraries
 # and is part of GPLed Heroine Virtual software
 License:	GPL
