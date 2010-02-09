@@ -14,6 +14,8 @@ Source0:	http://dl.sourceforge.net/heroines/%{name}-%{version}-src.tar.bz2
 Patch0:		%{name}-system-libs.patch
 Patch1:		%{name}-fix.patch
 URL:		http://heroinewarrior.com/mix2000.php3
+# that's weird, -devel are not really needed
+BuildRequires:	OpenGL
 BuildRequires:	alsa-lib-devel >= 1.0.8
 BuildRequires:	libstdc++-devel
 BuildRequires:	quicktime4linux-devel >= 2.2
